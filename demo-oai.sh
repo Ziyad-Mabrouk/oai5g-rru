@@ -565,7 +565,7 @@ if [[ "$NODE_GNB" == "sopnode-f3" ]]; then
   echo "Configuring core affinity for sopnode-f3..."
 
   # Set new AW2S options
-  OPTIONS_aw2s="--thread-pool 48,50,52,54,56,58,60,62 --log_config.global_log_options level,nocolor,time"
+  OPTIONS_aw2s="--thread-pool 19,21,23,25,27,29,31,33,35,37,39,41,43,45,47,49 --log_config.global_log_options level,nocolor,time"
 
   # Path to the gNB config file
   CONF_FILE="$PREFIX_DEMO/oai5g-rru/ran-config/conf/$CONF_jaguar"
@@ -574,16 +574,16 @@ if [[ "$NODE_GNB" == "sopnode-f3" ]]; then
     echo "Patching $CONF_FILE..."
 
     # Replace rxfh_core_id
-    sed -i 's/^\s*rxfh_core_id\s*=.*/        rxfh_core_id   = 48;/' "$CONF_FILE"
+    sed -i 's/^\s*rxfh_core_id\s*=.*/        rxfh_core_id   = 18;/' "$CONF_FILE"
 
     # Replace txfh_core_id
-    sed -i 's/^\s*txfh_core_id\s*=.*/        txfh_core_id   = 50;/' "$CONF_FILE"
+    sed -i 's/^\s*txfh_core_id\s*=.*/        txfh_core_id   = 20;/' "$CONF_FILE"
 
     # Replace tp_cores
-    sed -i 's/^\s*tp_cores\s*=.*/        tp_cores       = [52,54,56,58,60,62,96,98];/' "$CONF_FILE"
+    sed -i 's/^\s*tp_cores\s*=.*/        tp_cores       = [22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52];/' "$CONF_FILE"
 
     # Replace num_tp_cores
-    sed -i 's/^\s*num_tp_cores\s*=.*/        num_tp_cores   = 8;/' "$CONF_FILE"
+    sed -i 's/^\s*num_tp_cores\s*=.*/        num_tp_cores   = 16;/' "$CONF_FILE"
   else
     echo "Warning: Config file $CONF_FILE not found."
   fi
