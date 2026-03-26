@@ -1,4 +1,4 @@
-# gnb.sa.band78.133prb.aw2s.ddsuu.50MHz.conf
+# gnb.sa.band78.51prb.aw2s.ddsuu.20MHz.conf
 Active_gNBs: ["gNB-OAI"]
 Asn1_verbosity: "none"
 
@@ -14,8 +14,8 @@ gNBs:
           - sst: 1
     nr_cellid: 1
 
-    pdsch_AntennaPorts_XP: 2
-    pusch_AntennaPorts: 2
+    pdsch_AntennaPorts_XP: 1
+    pusch_AntennaPorts: 1
     do_CSIRS: 1
     do_SRS: 0
 
@@ -30,8 +30,8 @@ gNBs:
         dl_absoluteFrequencyPointA: 626748
         dl_offstToCarrier: 0
         dl_subcarrierSpacing: 1
-        dl_carrierBandwidth: 133
-        initialDLBWPlocationAndBandwidth: 36300
+        dl_carrierBandwidth: 51
+        initialDLBWPlocationAndBandwidth: 13750
         initialDLBWPsubcarrierSpacing: 1
         initialDLBWPcontrolResourceSetZero: 11
         initialDLBWPsearchSpaceZero: 0
@@ -39,9 +39,9 @@ gNBs:
         ul_frequencyBand: 78
         ul_offstToCarrier: 0
         ul_subcarrierSpacing: 1
-        ul_carrierBandwidth: 133
+        ul_carrierBandwidth: 51
         pMax: 20
-        initialULBWPlocationAndBandwidth: 36300
+        initialULBWPlocationAndBandwidth: 13750
         initialULBWPsubcarrierSpacing: 1
 
         prach_ConfigurationIndex: 98
@@ -116,8 +116,8 @@ RUs:
     remote_portd: 52183
     local_rf: "no"
     tr_preference: "udp_ecpri_if5"
-    nb_tx: 2
-    nb_rx: 2
+    nb_tx: 1
+    nb_rx: 1
     att_tx: 17
     att_rx: 0
     bands: [78]
@@ -145,4 +145,3 @@ log_config:
   rrc_log_level: "info"
   ngap_log_level: "info"
   f1ap_log_level: "info"
-
